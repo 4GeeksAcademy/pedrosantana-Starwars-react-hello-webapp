@@ -17,13 +17,13 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div  style={{backgroundImage: "url(http://www.script-tutorials.com/demos/360/images/stars.png)", backgroundColor:"black"}}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
+						<Route path="/demo/:theindex/:theelement" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
